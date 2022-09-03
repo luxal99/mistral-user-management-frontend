@@ -1,21 +1,21 @@
-import { NgModule } from "@angular/core";
-import { MatDialogModule } from "@angular/material/dialog";
-import { A11yModule } from "@angular/cdk/a11y";
-import { CdkTableModule } from "@angular/cdk/table";
-import { MatTabsModule } from "@angular/material/tabs";
-import { MatButtonModule } from "@angular/material/button";
-import { MatInputModule } from "@angular/material/input";
-import { MatIconModule } from "@angular/material/icon";
-import { MatSnackBarModule } from "@angular/material/snack-bar";
-import { MatDividerModule } from "@angular/material/divider";
-import { MatSelectModule } from "@angular/material/select";
-import { MatStepperModule } from "@angular/material/stepper";
-import { MatDatepickerModule } from "@angular/material/datepicker";
-import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-import { MatTableModule } from "@angular/material/table";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatPaginatorModule } from "@angular/material/paginator";
-import { MatTooltipModule } from "@angular/material/tooltip";
+import { NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { A11yModule } from '@angular/cdk/a11y';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   imports: [
@@ -30,7 +30,8 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     MatSnackBarModule,
     MatTabsModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatStepperModule,
   ],
   exports: [
     A11yModule,
@@ -50,6 +51,7 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     MatTabsModule,
     MatPaginatorModule,
     MatTooltipModule,
+    MatStepperModule,
   ],
   declarations: [],
 })

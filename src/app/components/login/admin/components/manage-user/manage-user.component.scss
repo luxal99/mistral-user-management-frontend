@@ -1,0 +1,14 @@
+.manage-users {
+  padding: 10em;
+  margin: 0 5em;
+  &--form {
+    &--step-form {
+      padding: 5em 10em;
+
+      .flex {
+        display: flex;
+        column-gap: 15px;
+      }
+    }
+  }
+}

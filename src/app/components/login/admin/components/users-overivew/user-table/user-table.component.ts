@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from '../../../../../../models/entity/User';
 
 @Component({
   selector: 'app-user-table',
   templateUrl: './user-table.component.html',
-  styleUrls: ['./user-table.component.scss']
+  styleUrls: ['./user-table.component.scss'],
 })
 export class UserTableComponent implements OnInit {
+  @Input() listOfUsers: User[] = [];
+  displayedColumns = ['firstName', 'lastName', 'email', 'username', 'status'];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

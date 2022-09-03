@@ -1,1 +1,46 @@
-<p>manage-user works!</p>
+<div class="manage-users">
+  <h2>Manage users</h2>
+  <div class="manage-users--form">
+    <mat-horizontal-stepper>
+      <mat-step label="User info">
+        <div class="manage-users--form--step-form" [formGroup]="userInfoForm">
+          <div class="flex">
+            <mat-form-field appearance="fill">
+              <mat-label>First name</mat-label>
+              <input matInput formControlName="firstName" />
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Last name</mat-label>
+              <input matInput formControlName="lastName" />
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+          </div>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" />
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <button mat-button color="accent" matStepperPrevious>Back</button>
+
+          <button matStepperNext color="primary" [disabled]="!userInfoForm.valid" mat-button>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Set username">
+        <div class="manage-users--form--step-form" [formGroup]="userForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username" />
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <button mat-button color="accent" matStepperPrevious>Back</button>
+          <button [disabled]="!userForm.valid || userInfoForm.valid" matStepperNext color="primary" mat-button (click)="save()">
+            Save
+          </button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

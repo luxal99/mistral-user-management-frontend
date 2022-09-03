@@ -3,7 +3,7 @@
 @include mat.core();
 
 $user-management-primary: mat.define-palette(mat.$amber-palette, A700);
-$user-management-accent: mat.define-palette(mat.$amber-palette, A400);
+$user-management-accent: mat.define-palette(mat.$indigo-palette, 900);
 $user-management-warn: mat.define-palette(mat.$red-palette);
 
 $user-management-theme: mat.define-light-theme(

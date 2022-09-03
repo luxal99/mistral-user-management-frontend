@@ -9,6 +9,7 @@ import { ManageUserPermissionComponent } from './components/manage-user-permissi
 import { UsersOverivewComponent } from './components/users-overivew/users-overivew.component';
 import { AdminMenuItemComponent } from './components/admin/admin-menu-item/admin-menu-item.component';
 import { RouterOutlet } from "@angular/router";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 
@@ -25,7 +26,8 @@ import { RouterOutlet } from "@angular/router";
   imports: [
     CommonModule,
     MaterialModule,
-    RouterOutlet
+    RouterOutlet,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }
