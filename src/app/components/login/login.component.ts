@@ -7,7 +7,7 @@ import {
   ACCESS_TOKEN_LC,
   AUTHORIZATION_HEADER,
 } from '../../util/constant/constant';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private snackBarService: SnackbarService,
-    private router:Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           ACCESS_TOKEN_LC,
           <string>response.headers.get(AUTHORIZATION_HEADER)
         );
-        this.router.navigate(['/admin'])
+        this.router.navigate(['/admin']);
       },
       (err: HttpErrorResponse) => {
         console.log(err.error['message']);

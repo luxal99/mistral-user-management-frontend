@@ -8,9 +8,8 @@ describe('ManageUserPermissionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManageUserPermissionComponent ]
-    })
-    .compileComponents();
+      declarations: [ManageUserPermissionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ManageUserPermissionComponent);
     component = fixture.componentInstance;

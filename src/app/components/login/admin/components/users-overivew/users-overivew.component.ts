@@ -39,6 +39,6 @@ export class UsersOverivewComponent implements OnInit {
 
   onPageChange(page: PageEvent) {
     this.query.page = page.pageIndex;
-    this.getUsers()
+    this.getUsers();
   }
 }

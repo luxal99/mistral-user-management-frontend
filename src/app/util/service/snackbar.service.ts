@@ -10,9 +10,9 @@ export class SnackbarService {
   open(message: string, action?: string) {
     return this.matSnackBar.open(message, action, {
       verticalPosition: 'top',
-      horizontalPosition:'right',
+      horizontalPosition: 'right',
       duration: 2000,
-      panelClass:['user-management-snackbar']
+      panelClass: ['user-management-snackbar'],
     });
   }
 }

@@ -13,10 +13,9 @@
   }
   justify-content: center;
   cursor: pointer;
-  -webkit-transition: .3s linear;
-
+  -webkit-transition: 0.3s linear;
 }
-.admin-menu-item-active{
+.admin-menu-item-active {
   background-color: $user-management-primary-light;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }

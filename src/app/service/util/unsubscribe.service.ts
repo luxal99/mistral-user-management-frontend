@@ -5,7 +5,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class UnsubscribeService implements OnDestroy {
-   onDestroy$ = new Subject<void>();
+  onDestroy$ = new Subject<void>();
 
   constructor() {}
 
