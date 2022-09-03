@@ -8,6 +8,7 @@ import { ManageUserComponent } from './components/manage-user/manage-user.compon
 import { ManageUserPermissionComponent } from './components/manage-user-permission/manage-user-permission.component';
 import { UsersOverivewComponent } from './components/users-overivew/users-overivew.component';
 import { AdminMenuItemComponent } from './components/admin/admin-menu-item/admin-menu-item.component';
+import { RouterOutlet } from "@angular/router";
 
 
 
@@ -23,7 +24,8 @@ import { AdminMenuItemComponent } from './components/admin/admin-menu-item/admin
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterOutlet
   ]
 })
 export class AdminModule { }

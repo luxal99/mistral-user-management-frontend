@@ -1,0 +1,21 @@
+@import "src/assets/style/scss/colors";
+@import "src/assets/style/scss/costant";
+.admin-menu-item {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  margin: 1em;
+  border-radius: $user-management-border-radius;
+  color: $user-management-secondary;
+  font-weight: bold;
+  p {
+    margin: 0 0 0 0.5em;
+  }
+  justify-content: center;
+  cursor: pointer;
+
+
+}
+.admin-menu-item-active{
+  background-color: $user-management-primary-light;
+}

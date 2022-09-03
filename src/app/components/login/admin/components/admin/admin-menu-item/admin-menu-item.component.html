@@ -1,1 +1,8 @@
-<p>admin-menu-item works!</p>
+<div
+  (click)="navigate()"
+  class="admin-menu-item"
+  [class.admin-menu-item-active]="currentUrl === navigationUrl"
+>
+  <mat-icon>{{ matIcon }}</mat-icon>
+  <p>{{ title }}</p>
+</div>

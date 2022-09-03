@@ -1,10 +1,20 @@
 <div class="admin">
   <mat-drawer-container fullscreen>
     <mat-drawer #drawer [opened]="true" mode="side">
-      <mat-drawer-content>
-        <h1>User management</h1>
-      </mat-drawer-content>
+      <h1>User management</h1>
+      <app-admin-menu-item
+        title="User overview"
+        matIcon="people"
+        [navigationUrl]="USER_OVERVIEW"
+      ></app-admin-menu-item>
+      <app-admin-menu-item
+        title="Manage users"
+        matIcon="people"
+        [navigationUrl]="MANAGE_USERS"
+      ></app-admin-menu-item>
     </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
   </mat-drawer-container>
-
 </div>
