@@ -1,4 +1,12 @@
 <div class="users-overview">
   <app-user-search (onSearch)="onSearch($event)"></app-user-search>
-  <app-user-table [listOfUsers]="listOfUsers || []"></app-user-table>
+  <app-user-table
+    [listOfUsers]="listOfUsers || []"
+    (onUserDelete)="getUsers()"
+  ></app-user-table>
+  <mat-paginator
+    (page)="onPageChange($event)"
+    [length]="totalResults"
+    [pageSize]="10"
+  ></mat-paginator>
 </div>

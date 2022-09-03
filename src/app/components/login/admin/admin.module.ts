@@ -10,6 +10,7 @@ import { UsersOverivewComponent } from './components/users-overivew/users-overiv
 import { AdminMenuItemComponent } from './components/admin/admin-menu-item/admin-menu-item.component';
 import { RouterOutlet } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
+import { UserConfirmationDialogComponent } from './components/users-overivew/user-table/user-confirmation-dialog/user-confirmation-dialog.component';
 
 
 
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     ManageUserComponent,
     ManageUserPermissionComponent,
     UsersOverivewComponent,
-    AdminMenuItemComponent
+    AdminMenuItemComponent,
+    UserConfirmationDialogComponent
   ],
   imports: [
     CommonModule,

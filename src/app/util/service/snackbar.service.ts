@@ -12,6 +12,7 @@ export class SnackbarService {
       verticalPosition: 'top',
       horizontalPosition:'right',
       duration: 2000,
+      panelClass:['user-management-snackbar']
     });
   }
 }

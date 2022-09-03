@@ -26,4 +26,8 @@ export class UserService {
       params: makeQueryParams(query)
     });
   }
+
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(this.httpRoute + id);
+  }
 }
