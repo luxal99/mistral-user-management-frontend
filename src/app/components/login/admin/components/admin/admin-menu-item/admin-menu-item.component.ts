@@ -34,7 +34,7 @@ export class AdminMenuItemComponent implements OnInit {
     this.router.events
       .pipe(
         filter((routerEvent) => routerEvent instanceof NavigationEnd),
-        map((route: any) => route['url']),
+        map((route: any) => route['url'].split(/[?#]/)[0]),
         takeUntil(this.unsubscribeService.onDestroy$)
       )
       .subscribe((url) => {

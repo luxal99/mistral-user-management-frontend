@@ -22,6 +22,18 @@
             <mat-icon matSuffix>person</mat-icon>
           </mat-form-field>
 
+          <mat-form-field appearance="fill" *ngIf="usernameQueryParam$ | async">
+            <mat-label>User status</mat-label>
+            <mat-select formControlName="status">
+              <mat-option
+                *ngFor="let status of listOfUserStatus"
+                [value]="status"
+              >
+                {{ status | titlecase }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
           <button mat-button color="accent" matStepperPrevious>Back</button>
 
           <button
@@ -29,12 +41,22 @@
             color="primary"
             [disabled]="!userInfoForm.valid"
             mat-button
+            *ngIf="!(usernameQueryParam$ | async)"
           >
             Next
           </button>
+          <button
+            (click)="update()"
+            color="primary"
+            [disabled]="!userInfoForm.valid"
+            *ngIf="usernameQueryParam$ | async"
+            mat-button
+          >
+            Update
+          </button>
         </div>
       </mat-step>
-      <mat-step label="Set username">
+      <mat-step label="Set username" *ngIf="!(usernameQueryParam$ | async)">
         <div class="manage-users--form--step-form" [formGroup]="userForm">
           <mat-form-field appearance="fill">
             <mat-label>Username</mat-label>
