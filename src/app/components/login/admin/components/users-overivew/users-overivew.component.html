@@ -1,4 +1,4 @@
 <div class="users-overview">
-  <app-user-search></app-user-search>
-  <app-user-table></app-user-table>
+  <app-user-search (onSearch)="onSearch($event)"></app-user-search>
+  <app-user-table [listOfUsers]="listOfUsers || []"></app-user-table>
 </div>
