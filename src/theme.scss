@@ -1,0 +1,18 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$user-management-primary: mat.define-palette(mat.$amber-palette, A700);
+$user-management-accent: mat.define-palette(mat.$amber-palette, A400);
+$user-management-warn: mat.define-palette(mat.$red-palette);
+
+$user-management-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $user-management-primary,
+      accent: $user-management-accent,
+      warn: $user-management-warn,
+    ),
+  )
+);
+@include mat.all-component-themes($user-management-theme);

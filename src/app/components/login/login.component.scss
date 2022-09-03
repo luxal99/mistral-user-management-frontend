@@ -1,0 +1,43 @@
+@import "src/assets/style/scss/colors";
+@import "src/assets/style/scss/costant";
+
+.login {
+  background: #fdc830; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f37335,
+    #fdc830
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f37335,
+    #fdc830
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+
+  &--container {
+    border-radius: $user-management-border-radius;
+    background-color: $user-management-white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    padding: 5em;
+    text-align: center;
+
+    &--form {
+      margin-top: 5em;
+
+      button{
+        color: $user-management-white;
+        padding: .25em;
+        width: 50%;
+      }
+    }
+  }
+}
