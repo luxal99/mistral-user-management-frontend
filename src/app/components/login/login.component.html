@@ -3,19 +3,19 @@
     <h2>Welcome to User Management</h2>
     <p>Please <b>Login</b></p>
 
-    <div class="login--container--form">
+    <div class="login--container--form" [formGroup]="loginForm">
       <mat-form-field appearance="fill">
         <mat-label>Username</mat-label>
-        <input matInput />
-        <mat-icon matSuffix> person </mat-icon>
+        <input matInput formControlName="username" />
+        <mat-icon matSuffix> person</mat-icon>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput />
-        <mat-icon matSuffix> lock </mat-icon>
+        <input matInput formControlName="password" type="password"/>
+        <mat-icon matSuffix> lock</mat-icon>
       </mat-form-field>
 
-      <button mat-raised-button color="primary">Login</button>
+      <button mat-raised-button color="primary" (click)="login()">Login</button>
     </div>
   </div>
 </div>
