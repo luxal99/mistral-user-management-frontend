@@ -38,7 +38,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/admin']);
       },
       (err: HttpErrorResponse) => {
-        console.log(err.error['message']);
         this.snackBarService.open(err.error['message']);
       }
     );

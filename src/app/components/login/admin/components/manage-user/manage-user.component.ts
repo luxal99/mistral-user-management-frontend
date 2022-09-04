@@ -76,7 +76,6 @@ export class ManageUserComponent implements OnInit {
 
   update() {
     this.usernameQueryParam$.subscribe((username: string) => {
-      console.log(username);
       this.userService
         .update(username, this.userInfoForm.getRawValue() as UserInfo)
         .subscribe((response) => {
