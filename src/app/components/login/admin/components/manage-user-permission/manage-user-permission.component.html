@@ -1,1 +1,23 @@
-<p>manage-user-permission works!</p>
+<div class="manage-user-permission" [formGroup]="userForm">
+  <h3>Manage user permission</h3>
+  <mat-form-field appearance="fill">
+    <mat-label>User permissions</mat-label>
+    <mat-select
+      formControlName="permissions"
+      multiple
+      [compareWith]="comparePermissions"
+    >
+      <mat-option
+        [value]="permission"
+        *ngFor="let permission of listOfPermissions | async"
+        >{{
+          permission.permissionName | titlecase | removeUnderscore
+        }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="updatePermissions()">
+    Update
+  </button>
+</div>

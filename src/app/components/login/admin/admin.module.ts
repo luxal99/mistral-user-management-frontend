@@ -12,6 +12,8 @@ import { RouterOutlet } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserConfirmationDialogComponent } from './components/users-overivew/user-table/user-confirmation-dialog/user-confirmation-dialog.component';
 import { SortDialogComponent } from './components/users-overivew/user-table/sort-dialog/sort-dialog.component';
+import { RemoveUnderscorePipe } from './pipes/remove-underscore.pipe';
+import { FormatPermissionsPipe } from './pipes/format-permissions.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SortDialogComponent } from './components/users-overivew/user-table/sort
     AdminMenuItemComponent,
     UserConfirmationDialogComponent,
     SortDialogComponent,
+    RemoveUnderscorePipe,
+    FormatPermissionsPipe,
   ],
   imports: [CommonModule, MaterialModule, RouterOutlet, ReactiveFormsModule],
 })

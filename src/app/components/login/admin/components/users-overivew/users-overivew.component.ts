@@ -6,7 +6,6 @@ import { TOTAL_RESULTS } from '../../../../../util/constant/constant';
 import { PageEvent } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { SortDialogComponent } from './user-table/sort-dialog/sort-dialog.component';
-import { Sort } from '@angular/material/sort';
 import { UserSort } from '../../../../../models/other/UserSort';
 
 @Component({

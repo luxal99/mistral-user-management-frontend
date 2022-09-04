@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 import { makeQueryParams } from '../../util/functions/make-query-params';
 import { UserQuery } from '../../util/query/UserQuery';
 import { UserInfo } from '../../models/entity/UserInfo';
+import { PermissionEnum } from '../../util/enums/PermissionEnum';
+import { Permission } from '../../models/entity/Permission';
 
 @Injectable({
   providedIn: 'root',
@@ -39,6 +41,15 @@ export class UserService {
 
   update(username: string, userInfo: UserInfo): Observable<any> {
     return this.http.put(this.httpRoute, userInfo, {
+      params: { username },
+    });
+  }
+
+  updatePermissions(
+    username: string,
+    permissions: Permission[]
+  ): Observable<any> {
+    return this.http.put(this.httpRoute + 'permissions', permissions, {
       params: { username },
     });
   }

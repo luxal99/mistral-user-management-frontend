@@ -21,6 +21,7 @@ export class UserTableComponent implements OnInit {
     'email',
     'username',
     'status',
+    'permissions',
     'actions',
   ];
 
@@ -57,6 +58,12 @@ export class UserTableComponent implements OnInit {
 
   openEditForm(username: string) {
     this.router.navigate([NavigationUrls.MANAGE_USERS], {
+      queryParams: { username },
+    });
+  }
+
+  navigateToAssignPermissionPage(username:string){
+    this.router.navigate([NavigationUrls.MANAGE_PERMISSION], {
       queryParams: { username },
     });
   }
