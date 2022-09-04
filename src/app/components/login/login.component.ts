@@ -36,9 +36,6 @@ export class LoginComponent implements OnInit {
           <string>response.headers.get(AUTHORIZATION_HEADER)
         );
         this.router.navigate(['/admin']);
-      },
-      (err: HttpErrorResponse) => {
-        this.snackBarService.open(err.error['message']);
       }
     );
   }

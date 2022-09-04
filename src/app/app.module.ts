@@ -7,8 +7,11 @@ import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './components/login/admin/admin.module';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { UnauthorizedInterceptor } from './interceptors/unauthorized.interceptor';
+import { NotificationInterceptor } from "./interceptors/notification.interceptor";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
@@ -22,7 +25,23 @@ import { AdminModule } from './components/login/admin/admin.module';
     HttpClientModule,
     AdminModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: UnauthorizedInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NotificationInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

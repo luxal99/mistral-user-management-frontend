@@ -69,18 +69,14 @@ export class ManageUserComponent implements OnInit {
       idUserInfo: this.userInfoForm.getRawValue() as UserInfo,
     };
 
-    this.userService.save(user).subscribe(() => {
-      this.snackBarService.open('User created successfully');
-    });
+    this.userService.save(user).subscribe(() => {});
   }
 
   update() {
     this.usernameQueryParam$.subscribe((username: string) => {
       this.userService
         .update(username, this.userInfoForm.getRawValue() as UserInfo)
-        .subscribe((response) => {
-          this.snackBarService.open('User updated successfully');
-        });
+        .subscribe(() => {});
     });
   }
 }
