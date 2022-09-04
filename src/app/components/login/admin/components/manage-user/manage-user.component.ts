@@ -69,6 +69,7 @@ export class ManageUserComponent implements OnInit {
       idUserInfo: this.userInfoForm.getRawValue() as UserInfo,
     };
 
+    delete user.idUserInfo?.status;
     this.userService.save(user).subscribe(() => {});
   }
 
