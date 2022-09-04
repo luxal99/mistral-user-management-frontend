@@ -11,6 +11,7 @@ import { AdminMenuItemComponent } from './components/admin/admin-menu-item/admin
 import { RouterOutlet } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserConfirmationDialogComponent } from './components/users-overivew/user-table/user-confirmation-dialog/user-confirmation-dialog.component';
+import { SortDialogComponent } from './components/users-overivew/user-table/sort-dialog/sort-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { UserConfirmationDialogComponent } from './components/users-overivew/use
     UsersOverivewComponent,
     AdminMenuItemComponent,
     UserConfirmationDialogComponent,
+    SortDialogComponent,
   ],
   imports: [CommonModule, MaterialModule, RouterOutlet, ReactiveFormsModule],
 })

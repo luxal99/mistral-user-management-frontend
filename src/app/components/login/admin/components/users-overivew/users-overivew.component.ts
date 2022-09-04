@@ -4,6 +4,10 @@ import { UserQuery } from '../../../../../util/query/UserQuery';
 import { User } from '../../../../../models/entity/User';
 import { TOTAL_RESULTS } from '../../../../../util/constant/constant';
 import { PageEvent } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { SortDialogComponent } from './user-table/sort-dialog/sort-dialog.component';
+import { Sort } from '@angular/material/sort';
+import { UserSort } from '../../../../../models/other/UserSort';
 
 @Component({
   selector: 'app-users-overivew',
@@ -17,7 +21,7 @@ export class UsersOverivewComponent implements OnInit {
     page: 0,
   };
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private matDialog: MatDialog) {}
 
   ngOnInit(): void {
     this.getUsers();
@@ -40,5 +44,16 @@ export class UsersOverivewComponent implements OnInit {
   onPageChange(page: PageEvent) {
     this.query.page = page.pageIndex;
     this.getUsers();
+  }
+
+  openSortDialog() {
+    this.matDialog
+      .open(SortDialogComponent)
+      .afterClosed()
+      .subscribe((sortData: UserSort) => {
+        this.query.orderBy = sortData.sortProperty;
+        this.query.orderByDirection = sortData.orderDirection;
+        this.getUsers();
+      });
   }
 }
