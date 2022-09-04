@@ -8,6 +8,7 @@ import {
   AUTHORIZATION_HEADER,
 } from '../../util/constant/constant';
 import { Router } from '@angular/router';
+import { NavigationUrls } from "../../util/constant/navigation-urls";
 
 @Component({
   selector: 'app-login',
@@ -35,7 +36,7 @@ export class LoginComponent implements OnInit {
           ACCESS_TOKEN_LC,
           <string>response.headers.get(AUTHORIZATION_HEADER)
         );
-        this.router.navigate(['/admin']);
+        this.router.navigate([NavigationUrls.USER_OVERVIEW]);
       }
     );
   }
