@@ -8,7 +8,7 @@ import {
   AUTHORIZATION_HEADER,
 } from '../../util/constant/constant';
 import { Router } from '@angular/router';
-import { NavigationUrls } from "../../util/constant/navigation-urls";
+import { NavigationUrls } from '../../util/constant/navigation-urls';
 
 @Component({
   selector: 'app-login',
@@ -30,14 +30,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    this.authService.auth(this.loginForm.getRawValue()).subscribe(
-      (response) => {
+    this.authService
+      .auth(this.loginForm.getRawValue())
+      .subscribe((response) => {
         localStorage.setItem(
           ACCESS_TOKEN_LC,
           <string>response.headers.get(AUTHORIZATION_HEADER)
         );
         this.router.navigate([NavigationUrls.USER_OVERVIEW]);
-      }
-    );
+      });
   }
 }

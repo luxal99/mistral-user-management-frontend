@@ -11,7 +11,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './components/login/admin/admin.module';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { UnauthorizedInterceptor } from './interceptors/unauthorized.interceptor';
-import { NotificationInterceptor } from "./interceptors/notification.interceptor";
+import { NotificationInterceptor } from './interceptors/notification.interceptor';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],

@@ -1,5 +1,5 @@
 import { UserInfo } from './UserInfo';
-import { Permission } from "./Permission";
+import { Permission } from './Permission';
 
 export interface User {
   username: string | null;

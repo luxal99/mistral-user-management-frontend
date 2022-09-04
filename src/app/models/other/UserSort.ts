@@ -1,6 +1,6 @@
-import { UserSortEnum } from "../../util/enums/UserSortEnum";
+import { UserSortEnum } from '../../util/enums/UserSortEnum';
 
 export interface UserSort {
-  sortProperty: UserSortEnum,
-  orderDirection: "ASC" | "DESC"
+  sortProperty: UserSortEnum;
+  orderDirection: 'ASC' | 'DESC';
 }

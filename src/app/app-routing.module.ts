@@ -4,9 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/login/admin/components/admin/admin.component';
 import { UsersOverivewComponent } from './components/login/admin/components/users-overivew/users-overivew.component';
 import { ManageUserComponent } from './components/login/admin/components/manage-user/manage-user.component';
-import {
-  ManageUserPermissionComponent
-} from "./components/login/admin/components/manage-user-permission/manage-user-permission.component";
+import { ManageUserPermissionComponent } from './components/login/admin/components/manage-user-permission/manage-user-permission.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },

@@ -62,7 +62,7 @@ export class UserTableComponent implements OnInit {
     });
   }
 
-  navigateToAssignPermissionPage(username:string){
+  navigateToAssignPermissionPage(username: string) {
     this.router.navigate([NavigationUrls.MANAGE_PERMISSION], {
       queryParams: { username },
     });
